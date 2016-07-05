@@ -1,0 +1,193 @@
+
+/*
+ * Full-page application style
+ */
+
+body.application,
+.keen-dashboard {
+ /* background: #fff;*/
+  font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 60px 20px 0;
+  background-color: #FFE4B5;
+ /* animation: pulse 5s infinite;
+  animation-duration: 15s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 7;*/
+}
+@keyframes pulse{
+  0%{
+    background-color: #001F3F;
+  }
+  100%{
+    background-color: #f1c40f;
+  }
+}
+body.application > .container-fluid,
+.keen-dashboard > .container-fluid {
+  margin: 0 0 32px;
+  margin: 0 0 2rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.application div[class^="col-"],
+.keen-dashboard div[class^="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+body.application div[class^="col-"] div[class^="col-"],
+.keen-dashboard div[class^="col-"] div[class^="col-"] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body.application hr,
+.keen-dashboard hr {
+  border-color: #fff;
+  margin: 10px 0;
+}
+
+body.application .navbar-inverse,
+.keen-dashboard .navbar-inverse {
+  background-color: #c0392b;
+  border-color: #34495e;
+  border-bottom: 2px;
+}
+
+body.application .navbar-inverse .navbar-nav > li > a,
+body.application .navbar .navbar-brand,
+.keen-dashboard .navbar-inverse .navbar-nav > li > a,
+.keen-dashboard .navbar .navbar-brand {
+  color: #fff;
+  font-weight:"bolder";
+  font-family: "cursive";
+  font-size: 20px;
+
+  text-decoration: none;
+}
+
+body.application .main-nav > li > a:hover,
+.keen-dashboard .main-nav > li > a:hover {
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border 300ms ease;
+  -o-transition: border 300ms ease;
+  transition: border 300ms ease;
+  border-bottom-color: white;
+}
+
+body.application .return-link,
+body.application .return-link:focus,
+body.application .return-link:hover,
+.keen-dashboard .return-link,
+.keen-dashboard .return-link:focus,
+.keen-dashboard .return-link:hover {
+  text-decoration: none;
+}
+div#cell1{
+  background-color: #6A5ACD ;
+   border: 1px solid #6A5ACD;
+
+}
+div#cells1{
+  background-color:#6A5ACD   ;
+  font-family: "monospace";
+  color: #ecf0f1;
+  font-size: 20px;
+  font-weight: "bolder";
+  font-style: italic;
+
+}
+div#cell2{
+  background-color:   #800000 ;
+   border: 1px solid #800000;
+}
+div#cells2{
+  background-color:   #800000 ;
+  font-family: "monospace";
+  color: #ecf0f1;
+  font-size: 20px;
+  font-weight: "bolder";
+  font-style: italic;
+}
+div#cell3{
+  background-color:     #6B8E23;
+   border: 1px solid #6B8E23;
+
+}
+div#cells3{
+  background-color:   #6B8E23  ;
+ font-family: "monospace";
+  color: #ecf0f1;
+  font-size: 20px;
+  font-weight: "bolder";
+  font-style: italic;
+
+}
+div#cell4{
+  background-color:   #CD853F;
+   border: 1px solid #CD853F;
+}
+div#cells4{
+  background-color:   #CD853F;
+  font-family: "monospace";
+  color: #ecf0f1;
+  font-size: 20px;
+  font-weight: "bolder";
+  font-style: italic;
+}
+div#cell5{
+  }
+div#cells5{
+  background-color: #9b59b6;
+}
+div#celt1{
+  background-color:   #7FFFD4;
+}
+div#celt2{
+  background-color:   #DDA0DD;
+}
+div#celt3{
+  background-color:   #FF7F50;
+}
+div#celt{
+  background-color:   #98FB98;
+}
+
+.chart-wrapper {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  
+  margin-bottom: 10px;
+}
+.chart-wrapper .chart-title {
+  border-bottom: 1px solid #d7d7d7;
+  color: #666;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 7px 10px 4px;
+  font-family: verdana;
+  color: #ecf0f1;
+  font-size: 15px;
+  font-weight: bolder;
+  
+}
+
+.chart-wrapper .chart-stage {
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.chart-wrapper .chart-notes {
+  background: #fbfbfb;
+  border-top: 1px solid #e2e2e2;
+  color: #808080;
+  font-size: 12px;
+  padding: 8px 10px 5px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+#hello{
+
+}

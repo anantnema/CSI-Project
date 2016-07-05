@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Assembly Elections in Puducherry,2016"
+      
+      },   
+      data: [{        
+        type: "column", 
+        color:"rgba(255,12,32,.5)",
+        name: "Seats Contested",
+        legendText: "Contested Seats",
+          indexLabelFontWeight:"bolder",
+          indexLabelFontColor:"black",
+        showInLegend: true, 
+        dataPoints:[
+       {label: "BJP", y: 30},
+        {label: "DMK", y: 9},
+        {label: "AIADMK", y: 30},
+        {label: "AINRC", y: 30},
+        {label: "INC", y: 21},
+        {label: "Independents", y: 0},
+       
+        ]
+      
+      },
+      {        
+        type: "line",
+         name: "Seats Won",
+         showInLegend: true,
+        legendText: "Seats Won",
+        dataPoints: [
+        {label: "BJP", y: 0},
+        {label: "DMK", y: 2},
+        {label: "AIADMK", y: 4},
+        {label: "AINRC", y: 8},
+        {label: "INC", y: 15},
+        {label: "Independents", y: 1}
+        
+        
+        ]
+      }
+        
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="canvas.js"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 75%;">
+  </div>
+</body>
+</html>

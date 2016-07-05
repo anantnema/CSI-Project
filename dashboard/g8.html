@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart9 = new CanvasJS.Chart("chartContainer9",
+    {
+      title:{
+        text: "Exit polls in WB"
+      },
+      animationEnabled: true,
+      
+      axisY: {
+        title: "Expected seats"
+      },
+      toolTip: {
+        shared: true,  
+        
+
+      },
+      data: [
+      {        
+        type: "bar",
+        showInLegend: true,
+        name: "Cvoter",
+        color: "gold",
+        dataPoints: [
+        { y: 167, label: "TMC"},
+        { y: 120, label: "Left+INC"},
+        { y: 4, label: "BJP"},        
+        { y: 3, label: "Others"}
+
+        ]
+      },
+      {        
+        type: "bar",
+        showInLegend: true,
+        name: "ABP",
+        color: "#ffa00f",          
+        dataPoints: [
+         { y: 163, label: "TMC"},
+        { y: 126, label: "Left+INC"},
+        { y: 1, label: "BJP"},        
+        { y: 4, label: "Others"}
+
+
+        ]
+      },
+      {        
+        type: "bar",
+        showInLegend: true,
+        name: "News Nation",
+        color: "#A57164",
+        dataPoints: [
+        { y: 153, label: "TMC"},
+        { y: 181, label: "Left+INC"},
+        { y: 1, label: "BJP"},        
+        { y: 0, label: "Others"}
+        ]
+      },
+      {        
+        type: "bar",
+        showInLegend: true,
+        name: "NDTV",
+        color: "#bbb",
+        dataPoints: [
+        { y: 184, label: "TMC"},
+        { y: 103, label: "Left+INC"},
+        { y: 5, label: "BJP"},        
+        { y: 2, label: "Others"}
+        ]
+      }
+      
+
+
+      ]
+    });
+
+chart9.render();
+}
+</script>
+<script type="text/javascript" src="canvas.js"></script></head>
+<body>
+  <div id="chartContainer9" style="height: 300px; width: 100%;">
+  </div>
+</body>
+
+</html>
+

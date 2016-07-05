@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart4 = new CanvasJS.Chart("chartContainer4",
+    {      
+      title:{
+        text: "Assembly Elections in Tamil Nadu,2016"
+      },
+      animationEnabled: true,
+      axisY :{
+        includeZero: false
+      },
+      toolTip: {
+        shared: "true"
+      },
+      data: [
+      {        
+        type: "spline", 
+        showInLegend: true,
+        name: "Contested Seats",
+        markerSize: 0,        
+        dataPoints: [
+        {label:"ADMK" , y:227 },
+         {label:"DMK" , y:176 },
+         {label:"CPI" , y:25 },
+          {label:"INC" , y:41 },
+           {label:"IUML" , y:5 },
+            {label:"BJP" , y:232 }
+             
+           
+           
+        ]
+      },
+      {        
+        type: "spline", 
+        showInLegend: true,
+        name: "Seats Won",
+        markerSize: 0,        
+        dataPoints: [
+
+        {label:"ADMK" , y:134 },
+         {label:"DMK" , y:89 },
+         {label:"CPI" , y:0 },
+          {label:"INC" , y:8 },
+           {label:"IUML" , y:1 },
+            {label:"BJP" , y:0 }   
+        ]
+      }      
+      ]
+    });
+
+chart4.render();
+}
+</script>
+<script type="text/javascript" src="canvas.js"></script>
+</head>
+<body>
+  <div id="chartContainer4" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>

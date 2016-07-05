@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<script type="text/javascript">
+window.onload = function () {
+    var chart10 = new CanvasJS.Chart("chartContainerA",
+    {
+        title: {
+            text: "Exit polls,puducherry"             
+        },
+        animationEnabled: true,
+        axisX:{      
+            
+            // labelAngle : 30,
+            // valueFormatString: "HHmm'hrs'"
+
+        },
+        axisY: {
+            title: "Number of expected seats"
+        },
+        legend: {
+            verticalAlign: "bottom",
+            horizontalAlign: "center"
+        },
+
+        data: [{        
+            name: "CVoter",
+            showInLegend: true,
+            legendMarkerType: "square",
+            type: "area",
+            color: "rgba(80,100,80,0.9)",
+            markerSize: 0,
+            
+            dataPoints: [
+            {label: "INC", y: 14  },
+             {label: "AINRC", y: 9  },
+              {label: "AIADMK", y: 5  },
+               {label: "BJP", y: 0 },
+                {label: "OTHERS", y: 2  }
+            ]
+        },
+        {
+            name: "India Today-Axis",
+            showInLegend: true,
+            legendMarkerType: "square",
+            type: "area",
+            color: "rgba(40,175,101,0.6)",
+            markerSize: 0,
+            
+            dataPoints: [
+            {label: "INC", y: 18  },
+             {label: "AINRC", y: 10  },
+              {label: "AIADMK", y: 2  },
+               {label: "BJP", y: 0 },
+                {label: "OTHERS", y: 1  }
+            ]
+
+        },
+        
+    {
+        name: "NDTV",
+            showInLegend: true,
+            legendMarkerType: "square",
+            type: "area",
+            color: "rgba(40,125,101,0.6)",
+            markerSize: 0,
+            
+            dataPoints: [
+            {label: "INC", y: 16  },
+             {label: "AINRC", y: 10  },
+              {label: "AIADMK", y: 3  },
+               {label: "BJP", y: 1 },
+                {label: "OTHERS", y: 0  }
+            ]
+    }
+        
+        
+        ]
+        
+    });
+
+chart10.render();
+}
+</script>
+<script type="text/javascript" src="canvas.js"></script>
+</head>
+<body>
+<div id="chartContainerA" style="height: 300px; width: 100%;">
+</div>
+</body>
+
+</html>

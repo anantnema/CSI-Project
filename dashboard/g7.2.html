@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+	<script type="text/javascript">
+	window.onload = function () {
+		var chart = new CanvasJS.Chart("chartContainer",
+		{
+			title:{
+				text: "Exit Polls, Assam (ABP)"
+			},
+                        animationEnabled: true,
+			theme: "theme2",
+			data: [
+			{        
+				type: "doughnut",
+				indexLabelFontFamily: "Garamond",       
+				indexLabelFontSize: 20,
+				startAngle:0,
+				indexLabelFontColor: "dimgrey",       
+				indexLabelLineColor: "darkgrey", 
+								
+
+				dataPoints: [
+				{ label:"BJP", y: 81},
+				{ label:"INC", y: 33},
+				{ label:"AIUDF", y: 10},
+				{ label:"OTHERS", y: 0}
+
+				]
+			}
+			]
+		});
+
+		chart.render();
+	}
+	</script>
+	<script type="text/javascript" src="canvas.js"></script>
+        </head>
+	<body>
+		<div id="chartContainer" style="height: 300px; width: 100%;">
+		</div>
+	</body>
+</html>

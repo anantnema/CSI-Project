@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+ <title>Basic HTML5 Column Chart </title>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart11 = new CanvasJS.Chart("chartContainer11",
+    {
+      title:{
+        text: "Voter Turnout"    
+      },
+      animationEnabled: true,
+      axisY: {
+        title: "Percentage of voters turnout"
+      },
+      legend: {
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      theme: "theme2",
+      data: [
+
+      {        
+        type: "column",  
+        showInLegend: true, 
+        legendMarkerColor: "grey",
+      
+        dataPoints: [      
+        {y: 82.21, label: "Assam"},
+        {y: 74,  label: "Tamil Nadu" },
+        {y: 82,  label: "Puducherry"},
+        {y: 79.51,  label: "West Bengal"}
+             
+        ]
+      }   
+      ]
+    });
+
+    chart11.render();
+  }
+  </script>
+  <script type="text/javascript" src="canvas.js"></script>
+</head>
+  <body>
+  <div id="chartContainer11" style="height: 300px; width: 100%;">
+    </div>
+  </body>
+</html>

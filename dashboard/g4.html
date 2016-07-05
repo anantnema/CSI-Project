@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer3",
+    {
+      title:{
+        text: "Assembly elections in West Bengal,2016"
+      }, 
+      animationEnabled: true,              
+      data: [
+      {        
+        type: "splineArea",
+        color: "rgba(54,158,173,.7)",
+
+        dataPoints: [
+        {label:"BJP" ,y: 294},  
+         {label:"Congress" ,y: 92},  
+          {label:"Left Front" ,y: 199},  
+           {label:"Trinamool Congress" ,y: 293},  
+            {label:"Others" ,y: 0}  
+              
+        ]
+      },
+      {        
+        type: "splineArea",
+        color: "rgba(194,70,66,.7)",
+        dataPoints: [
+        {label:"BJP" ,y: 6},  
+         {label:"Congress" ,y: 44},  
+          {label:"Left Front" ,y: 32},  
+           {label:"Trinamool Congress" ,y: 211},  
+            {label:"Others" ,y: 1}  
+                         
+        ]
+      }             
+      
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="canvas.js"></script>
+
+</head>
+<body>
+  <div id="chartContainer3" style="height: 300px; width: 70%;">
+  </div>
+  
+
+</body>
+
+</html>
