@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="lib/canvas.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		 backgroundColor:"#000000",
+		theme: "theme1",//theme1
+
+		title:{
+			text: "Age Groups" ,
+			fontColor: "#09fb1c",
+        	fontSize: 30,
+        	padding: 2,
+        	margin: 10,
+       	 	fontFamily: "Pacifico", 
+        	             
+			},
+			axisX: {
+        
+        	titleFontFamily: "comic sans ms",
+        	titleFontWeight: "bold",
+        	labelFontColor: "rgb(0,75,141)",
+        		labelFontWeight:"bold",
+        	 tickColor: "red",
+        	tickLength: 7,
+        	tickThickness: 3
+      		},
+     		 axisY: {
+        	
+        	interlacedColor: "azure",
+        	titleFontWeight: "bold",
+        	titleFontFamily: "comic sans ms",
+        	tickLength: 10,
+        	tickColor: "DarkSlateBlue" ,
+        		labelFontWeight:"bold",
+        	tickThickness: 5
+
+      		},
+		animationEnabled: true,
+		animationDuration: 5000,   // change to true
+		data: [              
+		{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "doughnut",
+			dataPoints: [
+				{ label: "12-24",  y: 42},
+				{ label: "24-34", y: 46  },
+				
+				{ label: "35-50",  y: 10 },
+				{ label: "50-70", y: 2  },
+				
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>

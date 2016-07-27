@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="lib/canvas.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		 
+		theme: "theme1",//theme1
+		title:{
+			text: "Net Run Rate" ,
+			fontColor: "#2f4f4f",
+        	fontSize: 30,
+        	padding: 10,
+        	margin: 15,
+       	 	backgroundColor: "#FFFFE0",
+        	
+        	
+        	fontFamily: "Pacifico", 
+        	             
+			},
+			axisX: {
+        	title: "Teams",
+        	titleFontWeight: "bold",
+        	titleFontFamily: "comic sans ms",
+        	
+        	 tickColor: "red",
+        	tickLength: 5,
+        	tickThickness: 2,
+        	labelFontWeight:"bold",
+         labelFontColor:"black",
+      		},
+     		 axisY: {
+        	
+        	interlacedColor: "azure",
+        	titleFontFamily: "comic sans ms",
+        	tickLength: 10,
+        	tickColor: "DarkSlateBlue" ,
+        	tickThickness: 5,
+        	labelFontWeight:"bold",
+         labelFontColor:"black",
+
+      		},
+		animationEnabled: true,
+		animationDuration: 5000,   // change to true
+		data: [              
+		{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "line",
+			dataPoints: [
+				{ label: "DD",  y: -0.155  },
+				{ label: "RCB", y: +0.932  },
+				
+				{ label: "GL",  y: -0.374 },
+				{ label: "SRH", y: +0.245 },
+				{ label: "KKR",  y: +0.106  },
+				{ label: "RPS",  y: +0.015  },
+				
+				{ label: "MI",  y: -0.146  },
+				{ label: "KX1P",  y: -0.646 }
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>

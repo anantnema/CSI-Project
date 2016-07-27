@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="lib/canvas.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		/* backgroundColor:"#B3B6B7",*/
+		theme: "theme1",//theme1
+
+		title:{
+			text: "ScoreCard" ,
+			fontColor: "#2f4f4f",
+        	fontSize: 30,
+        	padding: 5,
+        	margin: 15,
+       	 	fontFamily: "Pacifico", 
+        	             
+			},
+			axisX: {
+        	title: "Teams",
+        	titleFontFamily: "comic sans ms",
+        	titleFontWeight: "bold",
+        	labelFontColor: "rgb(0,75,141)",
+        	 tickColor: "red",
+        	tickLength: 7,
+        	tickThickness: 3,
+        	labelFontSize: 15,
+        		labelFontWeight:"bold"
+      		},
+     		 axisY: {
+        	title: "Points",
+        	interlacedColor: "azure",
+        	titleFontWeight: "bold",
+        	titleFontFamily: "comic sans ms",
+        	tickLength: 10,
+        	tickColor: "DarkSlateBlue" ,
+        	labelFontWeight:"bold",
+        	tickThickness: 5,
+			labelFontColor:"black",
+      		},
+		animationEnabled: true,
+		animationDuration: 5000,   // change to true
+		data: [              
+		{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "splineArea",
+			dataPoints: [
+				
+				{ label: "Royal Challengers Bangalore", y: 16  },
+				
+				{ label: "Gujrat Lions",  y: 18 ,indexLabel: "highest",indexLabelFontColor: "red",markerSize: 9, markerColor: "brown",},
+				{ label: "Rising Pune Supergiants",  y: 10  },
+				{ label: "Sunrisers Hyderabad", y: 16  },
+				{ label: "Kolkata Knight Riders",  y: 16  },
+				
+				
+				{ label: "Mumbai Indians",  y: 14  },
+				{ label: "Kings X1 Punjab",  y: 8 ,indexLabel: "lowest",indexLabelFontColor: "red",markerSize: 9, markerColor: "brown",},
+				{ label: "Delhi Daredevils",  y: 14  },
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>

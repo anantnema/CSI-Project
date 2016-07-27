@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", 
+      {
+      title:{
+        text: "Most 6's"              
+            },
+      axisX:{
+        labelFontWeight:"bold",
+      },
+      data: [//array of dataSeries              
+        { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+         
+         type: "pie",
+         dataPoints: [
+          { label: "Virat Kohli",  y: 38 },
+          { label: "AB de Villiers", y: 37 },
+        
+          { label: "David Warner",  y:31  },
+          { label: "Chris Gayle", y: 21 },
+          { label: "Rohit Sharma",  y: 16  },
+          { label: "Lokesh Rahul",  y: 16 },
+          { label: "Dwayne Smith",  y: 16},
+          { label: "Andre Russell",  y: 15 }
+        
+         ]
+       }
+       ]
+       });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="lib/canvas.min.js"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>
+       
+
+       
