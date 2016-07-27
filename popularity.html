@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="lib/canvas.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		 backgroundColor:"#000000",
+		theme: "theme1",//theme1
+
+		title:{
+			text: "Hit/Flop" ,
+			fontColor: "#09fb1c",
+        	fontSize: 30,
+        	padding: 5,
+        	margin: 15,
+       	 	fontFamily: "Pacifico", 
+        	             
+			},
+			axisX: {
+        	/*title: "Teams",*/
+        	titleFontFamily: "comic sans ms",
+        	titleFontWeight: "bold",
+        	labelFontColor: "red",
+        	 tickColor: "red",
+        	tickLength: 7,
+        	tickThickness: 3,
+        	labelFontSize: 15,
+        		labelFontWeight:"bold"
+      		},
+     		 axisY: {
+        	/*title: "Points",*/
+        	interlacedColor: "azure",
+        	titleFontWeight: "bold",
+        	titleFontFamily: "comic sans ms",
+        	tickLength: 10,
+        	 interlacedColor: "#000000",
+        	  gridThickness: 0.5,
+        	tickColor: "DarkSlateBlue" ,
+        	labelFontWeight:"bold",
+        	tickThickness: 5,
+			labelFontColor:"red",
+      		},
+		animationEnabled: true,
+		animationDuration: 5000,   // change to true
+		data: [              
+		{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "column",
+			dataPoints: [
+				
+				{ label: "Hit", y: 46  },
+				
+				{ label: "Flop",  y: 54 },
+				
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>

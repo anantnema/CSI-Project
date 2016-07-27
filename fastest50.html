@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", 
+      {
+      title:{
+        text: "Fastest 50"              
+            },
+       axisY: {
+          title: "Balls",
+              },
+         axisX:{
+              labelFontSize: 15,
+              labelFontColor:"black",
+            },
+             axisY:{
+              
+              labelFontColor:"black",
+            },
+      data: [//array of dataSeries              
+        { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+         type: "spline",
+         dataPoints: [
+         { label: "Chris Moris",  y: 17 },
+        { label: "Kieron Pollard", y: 17 },
+        
+        { label: "DA Warner",  y: 21 },
+        { label: "Krunal Pandey", y: 22 },
+        { label: "Quinton de Kock",  y:22 },
+        { label: "David Warner",  y: 23},
+        
+        
+         ]
+       }
+       
+
+       ]
+     });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="lib/canvas.min.js"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>

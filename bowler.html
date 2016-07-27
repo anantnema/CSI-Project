@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", 
+      {
+      title:{
+        text: "Best Bowler"              
+            },
+      axisX:{
+        labelFontWeight:"bolder",
+
+         labelFontColor:"black",
+      },
+      axisY:{
+        labelFontWeight:"bold",
+         labelFontColor:"black",
+       },
+          
+      data: [//array of dataSeries              
+        { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+         
+         type: "scatter",
+         dataPoints: [
+         { label: "Bhuvneshwar Kumar",  y: 23 },
+        { label: "Yuzvendra Chahal", y: 21 },
+        
+        { label: "Shane Watson",  y: 20 ,markerSize: 9, markerColor: "brown",},
+        { label: "Dhawal Kulkarni", y: 18 },
+        { label: "Muztafizur Rahman",  y: 17  },
+        { label: "Mitchell McClenaghan",  y: 17 },
+        
+        { label: "Dwayne Bravo",  y: 17 },
+        { label: "Sandeep Sharma",  y: 15,markerSize: 9, markerColor: "brown",}
+         ]
+       }
+       
+
+       ]
+     });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="lib/canvas.min.js"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>

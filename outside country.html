@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", 
+      {
+      title:{
+        text: "Overseas Players"              
+            },
+      axisX:{
+        labelFontWeight:"bold",
+         labelFontColor:"black",
+      },
+      axisY:{
+
+              labelFontWeight:"bold",      
+              labelFontColor:"black",
+              interval:2,
+              gridThickness: 0.5,
+            },
+      legend: {
+     horizontalAlign: "center", // left, center ,right 
+     verticalAlign: "top",  // top, center, bottom
+   },
+      
+      
+
+      data: [//array of dataSeries              
+        { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+         type: "line",
+         showInLegend :true,
+         legendText:"OVERSES PLAYERS RETAINED",
+         dataPoints: [
+         {   label: "DD" ,y: 5,indexLabel: "5",indexLabelFontColor: "black"},
+        { label: "GL" ,y: 3 ,indexLabel: "3",indexLabelFontColor: "black"},
+        
+        {   label: "KXIP" ,y: 4 ,indexLabel: "4",indexLabelFontColor: "black"},
+        {  label: "KKR",y: 6 ,indexLabel: "6",indexLabelFontColor: "black"},
+        {   label: "MI" ,y: 6 ,indexLabel: "6",indexLabelFontColor: "black"},
+        { label: "RPS",y: 2 ,indexLabel: "2",indexLabelFontColor: "black" },
+        
+        {  label:"RCB" ,y: 5 ,indexLabel: "5",indexLabelFontColor: "black"},
+        {   label:"SRH",y: 5 ,indexLabel: "5",indexLabelFontColor: "black"}
+         ]
+       },
+       { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+         type: "line",
+         showInLegend:true,
+         legendText:"TOTAL PLAYERS RETAINED",
+         dataPoints: [
+         {   label: "DD",y: 13 ,indexLabel: "13",indexLabelFontColor: "black"},
+        {  label: "GL" ,y: 5 ,indexLabel: "5",indexLabelFontColor: "black"},
+        
+        {  label: "KKIP", y: 14 ,indexLabel: "14",indexLabelFontColor: "black" },
+        {  label: "KKR",y: 15 ,indexLabel: "15",indexLabelFontColor: "black" },
+        {  label: "MI",y: 19 ,indexLabel: "19",indexLabelFontColor: "black"},
+        {   label: "RPS",y: 5 ,indexLabel: "5",indexLabelFontColor: "black"},
+        
+        {  label: "RCB",y: 14 ,indexLabel: "14",indexLabelFontColor: "black"},
+        {   label: "SRH" ,y: 15 ,indexLabel: "15",indexLabelFontColor: "black"}
+         ]
+       }
+       
+
+       ]
+     });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="lib/canvas.min.js"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>

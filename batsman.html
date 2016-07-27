@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", 
+      {
+      title:{
+        text: "Best Batsman"              
+            },
+            axisX:{
+              labelFontSize: 11,
+              labelFontColor:"black",
+              labelFontWeight:"bold",
+            },
+             axisY:{
+              labelFontWeight:"bold",      
+              labelFontColor:"black",
+
+            },
+      data: [//array of dataSeries              
+        { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+         type: "spline",
+         dataPoints: [
+         { label: "Virat Kohli",  y: 973 },
+        { label: "David Warner", y: 848 },
+        
+        { label: "AB de Villiers",  y: 687 },
+        { label: "Shikhar Dhawan", y: 501 },
+        { label: "Gautam Gambhir",  y: 501 },
+        
+         ]
+       }
+       
+
+       ]
+     });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="lib/canvas.min.js"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>

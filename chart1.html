@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", 
+      {
+      title:{
+        text: "Win and Lost",
+        fontColor: "#2f4f4f",
+        fontSize: 30,
+        padding: 5,
+        margin: 15,           
+            },
+      axisX: {
+          title: "Teams",
+          titleFontFamily: "comic sans ms",
+          titleFontWeight: "bold",
+          labelFontColor: "rgb(0,75,141)",
+           tickColor: "red",
+          tickLength: 7,
+          tickThickness: 3,
+          labelFontWeight:"bold",
+         
+          },
+         axisY: {
+          title: "No. of games ",
+          interlacedColor: "azure",
+          titleFontWeight: "bold",
+          titleFontFamily: "comic sans ms",
+          tickLength: 10,
+          tickColor: "DarkSlateBlue" ,
+          tickThickness: 5,
+          interval:2
+          },
+      data: [//array of dataSeries       
+        { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+        type: "stackedArea",
+         showInLegend :true,
+         legendText:"Win",
+         dataPoints: [
+         { label: "Delhi Daredevils",  y: 7 },
+        { label: "Royal Challengers Bangalore", y: 8 },
+         { label: "Kolkata Knight Riders",  y: 8  },
+        { label: "Rising Pune Supergiants",  y: 5  },
+        
+        { label: "Gujrat Lions",  y: 9 ,markerSize: 9, markerColor: "brown",},
+        { label: "Sunrisers Hyderabad", y: 8  },
+       
+        
+        { label: "Mumbai Indians",  y: 7 },
+        { label: "Kings X1 Punjab",  y: 4 ,markerSize: 9, markerColor: "brown",}
+         ]
+       },
+       
+       
+        { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+          type: "stackedArea",
+         showInLegend :true,
+         legendText:"losses",
+         dataPoints: [
+        { label: "Delhi Daredevils",  y: 7 },
+        { label: "Royal Challengers Bangalore", y: 6 },
+         { label: "Kolkata Knight Riders",  y: 6  },
+        { label: "Rising Pune Supergiants",  y: 9 },
+        { label: "Gujrat Lions",  y: 5 ,markerSize: 9, markerColor: "brown",},
+        { label: "Sunrisers Hyderabad", y: 6 },
+       
+        
+        { label: "Mumbai Indians",  y: 7 },
+        { label: "Kings X1 Punjab",  y: 10,markerSize: 9, markerColor: "brown",}
+
+        ]
+       },
+        
+       ]
+     });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="lib/canvas.min.js"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>
