@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+	<script type="text/javascript">
+	window.onload = function () {
+		 CanvasJS.addColorSet("greenShades",
+                [//colorSet Array
+                "#7B68EE",
+                "#F08080"
+                
+                               
+                ]);
+		var chart = new CanvasJS.Chart("chartContainer",
+		{
+			theme: "theme3",
+						interactivityEnabled: true,
+                        animationEnabled: true,
+                        animationDuration: 3000,
+
+                        colorSet: "greenShades",
+                        backgroundColor:"#FFFFFF",
+
+
+                title:{
+				text: "Assembly Election Results in Assam,2016",
+				fontSize: 25,
+				fontFamily: "cursive",
+
+
+			},
+			toolTip: {
+				shared: true
+			},			
+			axisY: {
+				title: "Assembly Seats",
+				labelFontFamily:"cursive",
+				minimum : 0,
+				maximum : 125,
+				interval :25,
+				  tickLength: 15,
+        tickColor: "red",
+        titleFontFamily:"arial",
+				titleFontSize:15,
+				titleFontStyle: "bolder",
+			},
+			axisY2: {
+				title:"Seats Won",
+				titleFontFamily:"arial",
+				titleFontSize:15,
+				titleFontStyle: "bolder",
+				labelFontFamily:"cursive",
+				
+				titleMaxWidth: 150,
+				minimum : 0,
+				maximum : 125,
+				interval :25,
+					  tickLength: 15,
+        tickColor: "red"
+			},			
+			data: [ 
+			{
+				type: "column",	
+				name: "Seats Contested",
+				legendText: "Contested Seats",
+					indexLabelFontWeight:"bolder",
+					indexLabelFontColor:"black",
+				showInLegend: true, 
+				dataPoints:[
+				{label: "BJP", y: 89},
+				{label: "Asom Gana Parishad", y: 30},
+				{label: "Bodoland People's Front", y: 13},
+				{label: "INC", y: 122},
+				{label: "RJD", y: 12},
+				{label: "CPI(marxist)", y: 19},
+				{label: "CPI", y: 15},
+				{label: "AIUDF", y: 74}
+			
+
+
+				]
+
+			},
+			{
+				type: "column",	
+				name: "Seats won",
+				legendText: "Seats Won",
+				axisYType: "secondary",
+				showInLegend: true,
+				dataPoints:[
+				{label: "BJP", y: 60},
+				{label: "Asom Gana Parishad", y: 14},
+				{label: "Bodoland People's Front", y: 12},
+				{label: "INC", y: 26},
+				{label: "RJD", y: 0},
+				{label: "CPI(marxist)", y: 0},
+				{label: "CPI", y: 0},
+				{label: "AIUDF", y: 0}
+
+
+				]
+			}
+			
+			],
+          legend:{
+            cursor:"pointer",
+            itemclick: function(e){
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              	e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+            	chart.render();
+            }
+          },
+        });
+
+chart.render();
+}
+</script>
+  <script type="text/javascript" src="canvas.js"></script>
+</head>
+<body>
+	<div id="chartContainer" style="height: 300px; width: 80%;">
+	</div>
+</body>
+</html>

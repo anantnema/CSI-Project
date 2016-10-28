@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<script type="text/javascript">
+window.onload = function () {
+	var chart8 = new CanvasJS.Chart("chartContainer8",
+	{
+		title:{
+			text: "Exit polls ,Assam(NDTV)"
+		},     
+                animationEnabled: true,     
+		data: [
+		{        
+			type: "doughnut",
+			startAngle: 60,                          
+								
+			showInLegend: true,
+			dataPoints: [
+				{y: 73, indexLabel: "BJP #percent%", legendText: "BJP" },
+				{y: 37, indexLabel: "INC #percent%", legendText: "INC" },
+				{y: 12, indexLabel: "AIUDF #percent%", legendText: "AIUDF" },
+				{y: 4,  indexLabel: "Others #percent%", legendText: "Others" }			
+			]
+		}
+		]
+	});
+	chart8.render();
+	}
+</script>
+<script type="text/javascript" src="canvas.js"></script>
+</head>
+<body>
+<div id="chartContainer8" style="height: 300px; width: 100%;"></div>
+</body>
+</html>

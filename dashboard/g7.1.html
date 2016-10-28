@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer",
+	{
+		title:{
+			text: "Exit poll in Assam (Cvoter)"
+		},
+                animationEnabled: true,
+		legend:{
+			verticalAlign: "bottom",
+			horizontalAlign: "center"
+		},
+		data: [
+		{        
+			indexLabelFontSize: 20,
+			indexLabelFontFamily: "Monospace",       
+			indexLabelFontColor: "darkgrey", 
+			indexLabelLineColor: "darkgrey",        
+			indexLabelPlacement: "outside",
+			type: "pie",       
+			showInLegend: true,
+			toolTipContent: "{y} - <strong>#percent%</strong>",
+			dataPoints: [
+				{  y: 93, legendText:"BJP", indexLabel: "BJP" },
+				{  y: 33, legendText:"Congress", indexLabel: "Congress" },
+				{  y: 10, legendText:"AIUDF", indexLabel: "AIUDF" },
+				{  y: 4, legendText:"Others" , indexLabel: "Others"}
+				
+		
+		]
+	},
+	]
+	});
+	chart.render();
+}
+</script>
+<script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>

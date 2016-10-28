@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer3",
+    {
+      title:{
+        text: "Exit Poll in Tamil Nadu,2016"
+      }, 
+      animationEnabled: true,              
+      data: [
+      {        
+        type: "splineArea",
+        showInLegend:true,
+        name:"Elections.in",
+        color: "rgba(54,158,173,.7)",
+
+        dataPoints: [
+        {label:"AIADMK" ,y: 95},  
+         {label:"DMK" ,y: 130},  
+          {label:"PWF" ,y: 5},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 4}  
+              
+        ]
+      },
+      {        
+        type: "splineArea",
+        showInLegend:true,
+        name:"CVoter",
+        color: "rgba(194,50,66,.7)",
+        dataPoints: [
+         {label:"AIADMK" ,y: 139},  
+         {label:"DMK" ,y: 78},  
+          {label:"PWF" ,y: 15},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 2}  
+                         
+        ]
+      }  ,
+      {        
+        type: "splineArea",
+        showInLegend:true,
+        name:"India Today-Axis",
+        color: "rgba(194,70,50,.7)",
+        dataPoints: [
+         {label:"AIADMK" ,y: 99},  
+         {label:"DMK" ,y: 132},  
+          {label:"PWF" ,y: 0},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 3}  
+         ]
+        },      
+        {        
+        type: "splineArea",
+        showInLegend:true,
+        name:"News Nation",
+        color: "rgba(194,70,66,.7)",
+        dataPoints: [
+         {label:"AIADMK" ,y: 97},  
+         {label:"DMK" ,y: 116},  
+          {label:"PWF" ,y: 14},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 7}  
+         ]
+        },      
+        {        
+        type: "splineArea",
+        showInLegend:true,
+        name:"ABP",
+        color: "rgba(194,70,66,.7)",
+        dataPoints: [
+         {label:"AIADMK" ,y: 95},  
+         {label:"DMK" ,y: 132},  
+          {label:"PWF" ,y: 0},  
+           {label:"BJP" ,y: 1},  
+            {label:"Others" ,y: 6}  
+         ]
+        },      
+        {        
+        type: "splineArea",
+        showInLegend:true,
+        name:"Chanakya",
+        color: "rgba(194,70,66,.7)",
+        dataPoints: [
+         {label:"AIADMK" ,y: 90},  
+         {label:"DMK" ,y: 149},  
+          {label:"PWF" ,y: 0},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 4}  
+         ]
+        },                 
+          {        
+        type: "splineArea",
+        showInLegend:true,
+        name:"NDTV",
+        color: "rgba(194,70,66,.7)",
+        dataPoints: [
+         {label:"AIADMK" ,y: 103},  
+         {label:"DMK" ,y: 120},  
+          {label:"PWF" ,y: 0},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 11}  
+         ]
+        },  
+      
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="canvas.js"></script>
+
+</head>
+<body>
+  <div id="chartContainer3" style="height: 300px; width: 70%;">
+  </div>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard &rAarr; Assembly Elections,2016</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+  <script type="text/javascript">
+  window.onload = function () {
+     CanvasJS.addColorSet("greenShades",
+                [//colorSet Array
+                "#7B68EE",
+                "#F08080"
+                
+                               
+                ]);
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      theme: "theme3",
+            interactivityEnabled: true,
+                        animationEnabled: true,
+                        animationDuration: 3000,
+
+                        colorSet: "greenShades",
+                        backgroundColor:"#FFFFFF",
+
+
+                title:{
+        text: "Assembly Election Results in Assam,2016",
+        fontSize: 25,
+        fontColor :"#191970",
+        borderColor:"white"
+
+
+      },
+      toolTip: {
+        shared: true
+      },      
+      axisY: {
+        title: "Assembly Seats",
+        
+        minimum : 0,
+        maximum : 125,
+        interval :25,
+          tickLength: 15,
+        tickColor: "red",
+        titleFontFamily:"arial",
+        titleFontSize:15,
+        titleFontStyle: "bolder",
+        labelFontColor:"black",
+        labelFontWeight:"bold",
+        interlacedColor:" #FFC0CB"
+      },
+      axisY2: {
+        title:"Seats Won",
+        titleFontFamily:"arial",
+        titleFontSize:15,
+        titleFontStyle: "bolder",
+        
+        labelFontColor:"black",
+        labelFontWeight:"bold",
+        
+        titleMaxWidth: 150,
+        minimum : 0,
+        maximum : 125,
+        interval :25,
+            tickLength: 15,
+        tickColor: "red"
+      },      
+      axisX:{
+        labelFontWeight:"bolder",
+        labelAngle:160
+      },
+      data: [ 
+      {
+        type: "column", 
+        name: "Seats Contested",
+        legendText: "Contested Seats",
+          indexLabelFontWeight:"bolder",
+          indexLabelFontColor:"black",
+        showInLegend: true, 
+        dataPoints:[
+        {label: "BJP", y: 89},
+        {label: "Asom GP", y: 30},
+        {label: "Bodoland PF", y: 13},
+        {label: "INC", y: 122},
+        {label: "RJD", y: 12},
+          {label: "CPI", y: 15},
+          {label: "AIUDF", y: 74},
+      
+        {label: "CPI(marxist)", y: 19}
+      
+        
+
+
+        ]
+
+      },
+      {
+        type: "column", 
+        name: "Seats won",
+        legendText: "Seats Won",
+        axisYType: "secondary",
+        showInLegend: true,
+        dataPoints:[
+        {label: "BJP", y: 60},
+        {label: "Asom GP", y: 14},
+        {label: "Bodoland PF", y: 12},
+        {label: "INC", y: 26},
+        {label: "RJD", y: 0},
+          {label: "CPI", y: 0},
+            {label: "AIUDF", y: 0},
+        {label: "CPI(marxist)", y: 0}
+      
+      
+
+
+        ]
+      }
+      
+      ],
+          legend:{
+            cursor:"pointer",
+            itemclick: function(e){
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          },
+        });
+     var chart1 = new CanvasJS.Chart("chartContainer1",
+    {
+      title:{
+        text: "Assembly Elections in Puducherry,2016",
+        fontColor :"#191970",
+        borderColor:"white"
+      
+      },   
+      axisY:{
+        lineColor:"black",
+        labelFontColor: "#B22222",
+        labelFontWeight:"bold",
+        gridColor:"#666600"
+      },
+      axisX:{
+        lineColor:"black",
+        labelFontColor:"  #B22222",
+
+        labelFontWeight:"bolder"
+      },
+      data: [{        
+        type: "column", 
+        color:"rgba(255,12,32,.5)",
+        name: "Seats Contested",
+        legendText: "Contested Seats",
+          indexLabelFontWeight:"bolder",
+          indexLabelFontColor:"black",
+        showInLegend: true, 
+        dataPoints:[
+       {label: "BJP", y: 30},
+        {label: "DMK", y: 9},
+        {label: "AIADMK", y: 30},
+        {label: "AINRC", y: 30},
+        {label: "INC", y: 21},
+        {label: "Independents", y: 0},
+       
+        ]
+      
+      },
+      {        
+        type: "line",
+        color:" #4B0082",
+         name: "Seats Won",
+         showInLegend: true,
+        legendText: "Seats Won",
+        dataPoints: [
+        {label: "BJP", y: 0},
+        {label: "DMK", y: 2},
+        {label: "AIADMK", y: 4},
+        {label: "AINRC", y: 8},
+        {label: "INC", y: 15},
+        {label: "Independents", y: 1}
+        
+        
+        ]
+      }
+        
+      ]
+    });
+     var chart2 = new CanvasJS.Chart("chartContainer2",
+    {
+      title:{
+        text: "Assembly elections in West Bengal,2016",
+        fontColor :"#191970",
+        borderColor:"white"
+      }, 
+      axisY:{
+        interval: 50,
+        gridDashType: "dot",
+        lineColor:"black",
+        gridColor:"#40E0D0",
+        labelFontColor:"#006400 ",
+        labelFontWeight:"bold"
+      },
+      axisX:{
+        lineColor:"black",
+        labelFontColor:"#006400 ",
+        labelFontWeight:"bolder"
+      },
+      animationEnabled: true,              
+      data: [
+      {        
+        type: "splineArea",
+        color: "rgba(50,205,50,.6)",
+        showInLegend:true,
+        name:"Seats Contested",
+
+        dataPoints: [
+        {label:"BJP" ,y: 294},  
+         {label:"Congress" ,y: 92},  
+          {label:"Left Front" ,y: 199},  
+           {label:"Trinamool Congress" ,y: 293},  
+            {label:"Others" ,y: 0}  
+              
+        ]
+      },
+      {        
+        type: "splineArea",
+        color: "rgba(32,178,170,.9)",
+        showInLegend:true,
+        name:"Seats Won",
+        dataPoints: [
+        {label:"BJP" ,y: 6},  
+         {label:"Congress" ,y: 44},  
+          {label:"Left Front" ,y: 32},  
+           {label:"Trinamool Congress" ,y: 211},  
+            {label:"Others" ,y: 1}  
+                         
+        ]
+      }             
+      
+      ]
+    });
+       var chart3 = new CanvasJS.Chart("chartContainer3",
+    {      
+      title:{
+        text: "Assembly Elections in Tamil Nadu,2016",
+        fontColor :"#191970",
+        borderColor:"white"
+      },
+      animationEnabled: true,
+      axisY :{
+        lineColor:"black",
+        gridColor :"black",
+        includeZero: false,
+        minimum:0,
+        maximum:250,
+        interlacedColor: "#FEFDDF",
+        interval: 50,
+        labelFontColor:"green",
+        labelFontWeight:"bold"
+      },
+      axisX:
+      {
+        lineColor:"black",
+        labelAngle:160,
+        labelFontWeight:"bolder",
+        labelFontColor:"green"
+      },
+      toolTip: {
+        shared: "true"
+      },
+      data: [
+      {        
+        type: "spline",
+        color: "  #0000CD",
+        indexLabelFontColor:"blue",
+        lineThickness: 5,
+        showInLegend: true,
+        name: "Contested Seats",
+        markerSize: 0,        
+        dataPoints: [
+        {label:"ADMK" , y:227 },
+         {label:"DMK" , y:176 },
+         {label:"CPI" , y:25 },
+          {label:"INC" , y:41 },
+           {label:"IUML" , y:5 },
+            {label:"BJP" , y:232 }
+             
+           
+           
+        ]
+      },
+      {        
+        type: "spline",
+        color:"#DB7093", 
+        lineThickness:3,
+        showInLegend: true,
+        name: "Seats Won",
+        markerSize: 0,        
+        dataPoints: [
+
+        {label:"ADMK" , y:134 },
+         {label:"DMK" , y:89 },
+         {label:"CPI" , y:0 },
+          {label:"INC" , y:8 },
+           {label:"IUML" , y:1 },
+            {label:"BJP" , y:0 }   
+        ]
+      }      
+      ]
+    });
+
+        var chart4 = new CanvasJS.Chart("chartContainer4",
+    {
+      title:{
+        text: "Exit Poll in Tamil Nadu,2016",
+        fontColor:" #6B8E23",
+        fontWeight:"bolder"
+      }, 
+      axisY:{
+        interval:20,
+        gridDashType:"dot",
+        gridColor:" #E6E6FA",
+        maximum:200,
+        labelFontColor:"black",
+        lineColor:"black"
+
+      },
+      axisX:{
+        labelFontColor:"black",
+        lineColor:"black",
+        labelFontWeight:"bolder"
+      },
+      animationEnabled: true,              
+      data: [
+      {        
+        type: "spline",
+        showInLegend:true,
+        name:"Elections.in",
+        color: "green",
+
+        dataPoints: [
+        {label:"AIADMK" ,y: 95},  
+         {label:"DMK" ,y: 130},  
+          {label:"PWF" ,y: 5},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 4}  
+              
+        ]
+      },
+      {        
+        type: "spline",
+        showInLegend:true,
+        name:"CVoter",
+        color: "blue",
+        dataPoints: [
+         {label:"AIADMK" ,y: 139},  
+         {label:"DMK" ,y: 78},  
+          {label:"PWF" ,y: 15},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 2}  
+                         
+        ]
+      }  ,
+      {        
+        type: "spline",
+        showInLegend:true,
+        name:"India Today-Axis",
+        color: "yellow",
+        dataPoints: [
+         {label:"AIADMK" ,y: 99},  
+         {label:"DMK" ,y: 132},  
+          {label:"PWF" ,y: 0},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 3}  
+         ]
+        },      
+        {        
+        type: "spline",
+        showInLegend:true,
+        name:"News Nation",
+        color: "red",
+        dataPoints: [
+         {label:"AIADMK" ,y: 97},  
+         {label:"DMK" ,y: 116},  
+          {label:"PWF" ,y: 14},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 7}  
+         ]
+        },      
+        {        
+        type: "spline",
+        showInLegend:true,
+        name:"ABP",
+        color: "pink",
+        dataPoints: [
+         {label:"AIADMK" ,y: 95},  
+         {label:"DMK" ,y: 132},  
+          {label:"PWF" ,y: 0},  
+           {label:"BJP" ,y: 1},  
+            {label:"Others" ,y: 6}  
+         ]
+        },      
+        {        
+        type: "spline",
+        showInLegend:true,
+        name:"Chanakya",
+        color: "  #EE82EE",
+        dataPoints: [
+         {label:"AIADMK" ,y: 90},  
+         {label:"DMK" ,y: 149},  
+          {label:"PWF" ,y: 0},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 4}  
+         ]
+        },                 
+          {        
+        type: "spline",
+        showInLegend:true,
+        name:"NDTV",
+        color: "rgba(194,70,66,.7)",
+        dataPoints: [
+         {label:"AIADMK" ,y: 103},  
+         {label:"DMK" ,y: 120},  
+          {label:"PWF" ,y: 0},  
+           {label:"BJP" ,y: 0},  
+            {label:"Others" ,y: 11}  
+         ]
+        },  
+      
+      ]
+    });
+                CanvasJS.addColorSet("greenShades",
+                [//colorSet Array
+
+                " #20B2AA",
+               "#98FB98",
+                "#2E8B57",
+                "#3CB371",
+                "#90EE90"                
+                ]);
+       var chart5 = new CanvasJS.Chart("chartContainer5",
+  {
+    colorSet:"greenShades",
+    title:{
+      text: "Exit polls,2016 (Cvoter)",
+      fontColor:"#A0522D",
+      fontWeight:"bolder",
+      fontFamily:"Monospace"
+    },
+                animationEnabled: true,
+    legend:{
+      verticalAlign: "bottom",
+      horizontalAlign: "center"
+    },
+    data: [
+    {        
+      indexLabelFontSize: 10,
+      indexLabelFontFamily: "Monospace",       
+      indexLabelFontColor: "  #4B0082",
+      indexLabelFontWeight:"bolder", 
+      indexLabelLineColor: "black",        
+      indexLabelPlacement: "outside",
+      type: "pie",       
+      showInLegend: true,
+      toolTipContent: "{y} - <strong>#percent%</strong>",
+      dataPoints: [
+        {  y: 93, legendText:"BJP", indexLabel: "BJP" },
+        {  y: 33, legendText:"Congress", indexLabel: "Congress" },
+        {  y: 10, legendText:"AIUDF", indexLabel: "AIUDF" },
+        {  y: 4, legendText:"Others" , indexLabel: "Others"}
+        
+    
+    ]
+  },
+  ]
+  });
+        CanvasJS.addColorSet("pinkShades",
+                [//colorSet Array
+                  " #FF4500",
+                  " #FFD700",
+                  " #FF69B4",
+                  " #C71585"
+
+                                
+                ]);
+        var chart6 = new CanvasJS.Chart("chartContainer6",
+    {
+      colorSet:"pinkShades",
+      title:{
+        text: "Exit Polls,2016 (ABP)",
+         fontColor:"  #DC143C",
+      fontWeight:"bolder",
+      fontFamily:"Monospace"
+      },
+                        animationEnabled: true,
+      theme: "theme2",
+      data: [
+      {        
+        type: "doughnut",
+        showInLegend:true,
+        indexLabelFontFamily: "Garamond", 
+        legend:{
+          fontSize:10,
+        }  ,    
+        indexLabelFontSize: 10,
+        startAngle:0,
+        indexLabelFontColor: "black",       
+        indexLabelLineColor: "darkgrey", 
+                
+
+        dataPoints: [
+        { label:"BJP",legendText:"BJP", y: 81},
+        { label:"INC",legendText:"INC", y: 33},
+        { label:"AIUDF",legendText:"AIUDF", y: 10},
+        { label:"OTHERS",legendText:"OTHERS", y: 5}
+
+        ]
+      }
+      ]
+    }); 
+         CanvasJS.addColorSet("blueShades",
+                [//colorSet Array
+                  "   #DDA0DD",
+                  " #8B008B",
+                  " #4B0082",
+                  "   #E6E6FA"
+
+                                
+                ]);
+         var chart7 = new CanvasJS.Chart("chartContainer7",
+  {
+    colorSet:"blueShades",
+    title:{
+      text: "Exit polls,2016(News Nation)",
+      fontFamily:"Monospace",
+      fontWeight:"bolder",
+      fontColor:" #8FBC8F"
+
+    },
+                animationEnabled: true,
+    legend:{
+      verticalAlign: "bottom",
+     
+      fontSize: 10,
+      fontFamily: "Helvetica"        
+    },
+    theme: "theme2",
+    data: [
+    {        
+      type: "pie",       
+      indexLabelFontFamily: "Garamond",       
+      indexLabelFontSize: 10,
+      indexLabelFontColor:"black",
+      
+      startAngle:-20,      
+      showInLegend: true,
+      
+      dataPoints: [
+        {  y: 65, legendText:"BJP", label: "BJP" },
+        {  y: 49 , legendText:"INC", label: "INC" },
+        {  y: 9, legendText:"AIUDF", label: "AIUDF" },
+             
+        {  y: 3, legendText:"OTHERS" , label: "OTHERS"}
+      ]
+    }
+    ]
+  });
+
+         CanvasJS.addColorSet("niceShades",
+                [//colorSet Array
+                  "   #87CEFA",
+                  " #B0E0E6",
+                  "   #4169E1",
+                  "   #000080"
+
+                                
+                ]);
+
+var chart8 = new CanvasJS.Chart("chartContainer8",
+  {
+    colorSet:"niceShades",
+    title:{
+      text: "Exit polls,2016 (NDTV)",
+      fontFamily:"Monospace",
+      fontWeight:"bolder",
+      fontColor:" #800080"
+    },     
+                animationEnabled: true,     
+    data: [
+    {        
+      type: "doughnut",
+      startAngle: 60,                          
+       indexLabelFontColor:"black",         
+      showInLegend: true,
+      dataPoints: [
+        {y: 73, indexLabel: "BJP ", legendText: "BJP" },
+        {y: 37, indexLabel: "INC ", legendText: "INC" },
+        {y: 12, indexLabel: "AIUDF ", legendText: "AIUDF" },
+        {y: 4,  indexLabel: "Others ", legendText: "Others" }      
+      ]
+    }
+    ]
+  });
+    var chart9 = new CanvasJS.Chart("chartContainer9",
+    {
+      title:{
+        text: "Exit polls in West Bengal,2016",
+        fontFamily:"sans-serif",
+        fontColor:" #191970"
+      },
+      animationEnabled: true,
+      
+      axisY: {
+        title: "Expected seats",
+        labelFontColor:"black",
+        lineColor:"black",
+        gridColor:"black",
+        tickColor:" #8A2BE2",
+        labelFontColor:"black",
+        labelFontStyle:"italic"
+      },
+      toolTip: {
+        shared: true,  
+        
+
+      },
+      data: [
+      {        
+        type: "bar",
+        showInLegend: true,
+        name: "Cvoter",
+        color: "gold",
+        dataPoints: [
+        { y: 167, label: "TMC"},
+        { y: 4, label: "BJP"}, 
+        { y: 120, label: "Left+INC"},
+               
+        { y: 3, label: "Others"}
+
+        ]
+      },
+      {        
+        type: "bar",
+        showInLegend: true,
+        name: "ABP",
+        color: "#ffa00f",          
+        dataPoints: [
+         { y: 163, label: "TMC"},
+          { y: 1, label: "BJP"}, 
+        { y: 126, label: "Left+INC"},
+              
+        { y: 4, label: "Others"}
+
+
+        ]
+      },
+      {        
+        type: "bar",
+        showInLegend: true,
+        name: "News Nation",
+        color: "#A57164",
+        dataPoints: [
+        { y: 153, label: "TMC"},
+        { y: 1, label: "BJP"},
+        { y: 181, label: "Left+INC"},
+                
+        { y: 0, label: "Others"}
+        ]
+      },
+      {        
+        type: "bar",
+        showInLegend: true,
+        name: "NDTV",
+        color: "#bbb",
+        dataPoints: [
+        { y: 184, label: "TMC"},
+        { y: 5, label: "BJP"},  
+        { y: 103, label: "Left+INC"},
+              
+        { y: 2, label: "Others"}
+        ]
+      }
+      
+
+
+      ]
+    });
+     var chart10 = new CanvasJS.Chart("chartContainerA",
+    {
+        title: {
+            text: "Exit polls in Puducherry,2016",
+            fontFamily:"verdana",
+            fontColor:" #800000"             
+             },
+        animationEnabled: true,
+        axisX:{      
+            
+             labelAngle : 160,
+             labelFontColor:"black",
+             labelFontWeight:"bold"
+            // valueFormatString: "HHmm'hrs'"
+
+        },
+        axisY: {
+            title: "Number of expected seats",
+            titleFontFamily:"arial",
+            titleFontSize:15,
+
+            labelFontColor:"black",
+            
+            interlacedColor:"#FFFFCC",
+            indexLabelFontColor:"black"
+        },
+        legend: {
+            verticalAlign: "bottom",
+            horizontalAlign: "center"
+        },
+
+        data: [{        
+            name: "CVoter",
+            showInLegend: true,
+            legendMarkerType: "square",
+            type: "area",
+            color: "rgba(80,100,80,0.9)",
+            markerSize: 0,
+            
+            dataPoints: [
+            {label: "INC", y: 14  },
+             {label: "AINRC", y: 9  },
+              {label: "AIADMK", y: 5  },
+               {label: "BJP", y: 0 },
+                {label: "OTHERS", y: 2  }
+            ]
+        },
+        {
+            name: "India Today-Axis",
+            showInLegend: true,
+            legendMarkerType: "square",
+            type: "area",
+            color: "rgba(40,175,101,0.6)",
+            markerSize: 0,
+            
+            dataPoints: [
+            {label: "INC", y: 18  },
+             {label: "AINRC", y: 10  },
+              {label: "AIADMK", y: 2  },
+               {label: "BJP", y: 0 },
+                {label: "OTHERS", y: 1  }
+            ]
+
+        },
+        
+    {
+        name: "NDTV",
+            showInLegend: true,
+            legendMarkerType: "square",
+            type: "area",
+            color: "rgba(220,20,60,0.6)",
+            markerSize: 0,
+            
+            dataPoints: [
+            {label: "INC", y: 16  },
+             {label: "AINRC", y: 10  },
+              {label: "AIADMK", y: 3  },
+               {label: "BJP", y: 1 },
+                {label: "OTHERS", y: 0  }
+            ]
+    }
+        
+        
+        ]
+        
+    });
+       CanvasJS.addColorSet("aweShades",
+                [//colorSet Array
+
+                "   #C71585",
+               "  #191970",
+                " #9ACD32",
+                "   #800000",
+                "#90EE90"                
+                ]);
+      var chart11 = new CanvasJS.Chart("chartContainer11",
+    {
+      colorSet:"aweShades",
+      title:{
+        text: "Voter Turnout in  Assembly Elections(2016)"  ,
+         fontFamily:"verdana",
+         fontWeight:"bolder"
+
+      },
+      animationEnabled: true,
+      axisY: {
+        title: "Percentage of voters turnout",
+        indexLabelFontColor: "black",
+        gridColor:"lightblue"
+      },
+      axisX:{
+        labelAngle:160
+      },
+      legend: {
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      theme: "theme2",
+      data: [
+
+      {        
+        type: "column",  
+        
+       
+      
+        dataPoints: [      
+        {y: 82.21, label: "Assam"},
+        {y: 74,  label: "Tamil Nadu" },
+        {y: 82,  label: "Puducherry"},
+        {y: 79.51,  label: "West Bengal"}
+             
+        ]
+      }   
+      ]
+    });
+
+
+chart.render();
+chart1.render();
+chart2.render();
+chart3.render();
+chart4.render();
+chart5.render();
+chart6.render();
+chart7.render();
+chart8.render();
+chart9.render();
+chart10.render();
+chart11.render();
+}
+</script>
+  <script type="text/javascript" src="dashboard/canvas.js"></script>
+</head>
+<body class="application">
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+    <!--    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>-->
+        <a class="navbar-brand" href="#">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="navbar-brand" href="#">Dashboard&rAarr;Assembly Elections</a>
+      </div>
+   <!--   <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Parties</a></li>
+          <li><a href="#">Public</a></li>
+          <li><a href="#">Manifesto</a></li>
+          
+        </ul>
+      </div>-->
+    </div>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <div id ="cell1" class="chart-wrapper">
+          <div class="chart-title">
+           Chief Minister of   Tamil Nadu
+          </div>
+          <div class="chart-stage">
+            <img src="assets/img/47731781.jpg" alt="J Jayalalithaa" style="height:250px; width:100%;">
+          </div>
+          <div id="cells1" class="chart-notes">
+                J Jayalalithaa
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div id="cell2" class="chart-wrapper">
+          <div class="chart-title">
+            Chief Minister of    West Bengal
+          </div>
+          <div class="chart-stage">
+              <img src="assets/img/20921_S_West-Bengal-Dreamland-inves.jpg" alt="Mamata Banerjee" style="height:250px; width:100%;">
+          </div>
+          <div id = "cells2" class="chart-notes">
+            Mamata Banerjee
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div id= "cell3" class="chart-wrapper">
+          <div class="chart-title">
+              Chief Minister of   Assam
+          </div>
+          <div class="chart-stage">
+            <img src="assets/img/02TH_GOGOI_1705991f.jpg" alt="Tarun Gogoi" style="height:250px; width:100%;">
+          </div>
+          <div id = "cells3" class="chart-notes">
+                 Tarun Gogoi
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div id= "cell4" class="chart-wrapper">
+          <div class="chart-title">
+            Chief Minister of  Puducherry
+          </div>
+          <div class="chart-stage">
+             <img src="assets/img/rangasamy-pony-CM-e1407138861209.jpg" alt="N Rangasamy" style="height:250px; width:100%;">
+          </div>
+          <div id="cells4" class="chart-notes">
+                  N Rangasamy
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div id ="cell5" class="chart-wrapper">
+          <div class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            TAMIL NADU
+          </div>
+          <div class="chart-stage">
+            <div id="chartContainer3" style="height: 300px; width: 100%;">
+  </div>
+          </div>
+          <div id= "cells5" class="chart-notes">
+            ---------------------------
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div id ="cell5" class="chart-wrapper">
+          <div class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            WEST BENGAL
+          </div>
+          <div class="chart-stage">
+              <div id="chartContainer2" style="height: 300px; width: 80%; padding-left:50pt;">
+            </div>
+          </div>
+          <div id= "cells5" class="chart-notes">
+            ----------------------------
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div id ="cell5" class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            ASSAM
+          </div>
+          <div class="chart-stage">
+            
+            <div id="chartContainer" style="height: 300px; width: 80%; padding-left:50pt;">
+            </div>
+          </div>
+          <div id= "cells5" class="chart-notes">
+            -------------------------------
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div id ="cell5" class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            PUDUCHERRY
+          </div>
+          <div class="chart-stage">
+            <div id="chartContainer1" style="height: 300px; width: 80%; padding-left:50pt;">
+            </div>
+          </div>
+          <div id= "cells5" class="chart-notes">
+            -------------------------------
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <div id ="cell1" class="chart-wrapper">
+          <div class="chart-title">
+            Tamil Nadu
+          </div>
+          <div class="chart-stage">
+            <img src="assets/img/tamilnadu.gif" alt="Map of tamil nadu" style="height:250px; width:100%;">
+          </div>
+          <div id="cells1" class="chart-notes">
+             
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div id="cell2" class="chart-wrapper">
+          <div class="chart-title">
+             West Bengal
+          </div>
+          <div class="chart-stage">
+              <img src="assets/img/wb.jpg" alt="Map of west bengal" style="height:250px; width:100%;">
+          </div>
+          <div id = "cells2" class="chart-notes">
+          
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div id= "cell3" class="chart-wrapper">
+          <div class="chart-title">
+               Assam
+          </div>
+          <div class="chart-stage">
+            <img src="assets/img/assam.jpg" alt="Map of assam" style="height:250px; width:100%;">
+          </div>
+          <div id = "cells3" class="chart-notes">
+                
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div id= "cell4" class="chart-wrapper">
+          <div class="chart-title">
+            Puducherry
+          </div>
+          <div class="chart-stage">
+             <img src="assets/img/pondicherry.jpg" alt="Map of pondicherry" style="height:250px; width:100%;">
+          </div>
+          <div id="cells4" class="chart-notes">
+              
+          </div>
+        </div>
+      </div>
+    </div>
+           <div class="row">
+
+      <div class="col-sm-12">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            Tamil Nadu
+          </div>
+          <div class="chart-stage">
+            <div id="chartContainer4" style="height: 300px; width: 70%; padding-left:140pt;">
+  </div>
+          </div>
+          <div id="celt1" class="chart-notes">
+            ---------------------------------
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            Assam
+          </div>
+          <div class="chart-stage">
+            <div id="grid-1-1">
+              <div id="chartContainer5" style="height: 300px; width: 100%;">
+  </div>
+            </div>
+          </div>
+          <div id="celt" class="chart-notes">
+            -------------------------
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            Assam
+          </div>
+          <div class="chart-stage">
+              <div id="chartContainer6" style="height: 300px; width: 100%;">
+    </div>          
+    </div>
+          <div id="celt" class="chart-notes">
+            --------------------------
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            Assam
+          </div>
+          <div class="chart-stage">
+            <div id="chartContainer7" style="height: 300px; width: 100%;"></div>
+          </div>
+          <div id="celt" class="chart-notes">
+            ---------------------------
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+         Assam
+          </div>
+          <div class="chart-stage">
+           <div id="chartContainer8" style="height: 300px; width: 100%;"></div>
+          </div>
+          <div id="celt" class="chart-notes">
+            ----------------------------
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            West Bengal
+          </div>
+          <div class="chart-stage">
+             <div id="chartContainer9" style="height: 300px; width: 100%;">
+  </div>
+
+          </div>
+          <div id="celt2" class="chart-notes">
+            -----------------------------
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            Puducherry
+          </div>
+          <div class="chart-stage">
+             <div id="chartContainerA" style="height: 300px; width: 100%;">
+</div>
+          </div>
+          <div id="celt3" class="chart-notes">
+            ------------------------------
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+
+     <!-- <div class="col-sm-12">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+           
+          </div>
+          <div class="chart-stage">
+            <img src="assets/img/635815938138639999-1147993578_vote.imgopt1000x70.jpg" alt="No picture" style="height:250px; width:100%;">
+  </div>
+          </div>
+          <div class="chart-notes">
+            
+          </div>
+        </div>
+      </div>-->
+
+      <div class="row">
+    <div class="col-sm-12">
+        <div id ="hello" class="chart-wrapper">
+          <div class="chart-title" style="color:black;font-weight:bolder;font-size:20px;">
+            
+          </div>
+          <div class="chart-stage">
+              <div id="chartContainer11" style="height: 400px; width: 100%;">
+    </div>
+          </div>
+          <div class="chart-notes">
+            ------------------------
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <div id ="footer">
+  <div class="row">
+  <div class="container">
+    <button type="button" class="btn btn-default btn-sm" style="margin-left:350px">
+          <span class="glyphicon glyphicon-thumbs-up"></span> View on Github
+        </button>
+   </div>   
+   </div>  
+   </div>
+
+  <script type="text/javascript" src="assets/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="assets/lib/holderjs/holder.js"></script>
+  <script>
+    Holder.add_theme("white", { background:"#fff", foreground:"#a7a7a7", size:10 });
+  </script>
+
+ <script type="text/javascript" src="assets/lib/global-js/dist/global.min.js"></script>
+ <!-- <script type="text/javascript" src="assets/js/meta.js"></script>-->
+
+
+
+</body>
+</html>
