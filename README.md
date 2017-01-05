@@ -1,10 +1,4 @@
-About the Project
-The project is based on Data Visualisation.
-
-Mentor
-Anant Nema
+#About the Project#
+The Project done under Computer Society of India is based on Data Visualisation using HTML,CSS and Javascript along with gaining knowledge of D3.js
  
-Contributors 
-Tayba Wasim
-Himanshi Khandelwal
-Anushka Kedia 
+The project involved visualising data of Assembly Elections that took place in Tamil Nadu,Kerala ,West Bengal and Puducherry.
